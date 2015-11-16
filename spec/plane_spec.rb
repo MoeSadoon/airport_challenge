@@ -1,27 +1,33 @@
-require 'plane'
-
+require './lib/plane'
 
 describe Plane do
+	subject(:plane) {described_class.new}
 
-it "is expected to fly when created" do
-	expect(subject.flying?).to be_truthy
-end
+	it "is expected to be flying upon creation" do
+		expect(plane.flying).to eq true
+	end
 
-it "can land" do
-	expect(subject.land).to be_falsy
-end
+	it "can land at an airport" do
+		expect(plane).to respond_to(:land)
+	end
 
-it "is landed after landing" do
-	expect(subject.landed?).to be_truthy
-end
+	it "should not be flying after landing" do
+		plane.land
+		expect(plane.flying).to eq false
+	end
 
- it 'can take off' do
- 	expect(subject.take_off).to be_truthy
- end
 
- it 'is flying after take off' do
- 	subject.take_off
- 	expect (subject.flying?).to be_truthy
- end
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
