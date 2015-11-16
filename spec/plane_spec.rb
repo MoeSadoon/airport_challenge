@@ -16,6 +16,16 @@ describe Plane do
 		expect(plane.flying).to eq false
 	end
 
+	it "can take off" do
+		expect(plane).to respond_to(:take_off)
+	end
+
+	it "should be flying after take off" do
+		plane.land
+		plane.take_off
+		expect(plane.flying).to be true
+	end
+
 
 
 
