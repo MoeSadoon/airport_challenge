@@ -8,19 +8,19 @@ describe Airport do
     before(:each) { allow(airport).to receive(:stormy?).and_return(false) }
 
     it "allows plane to land in it" do
-      airport.land(plane)
+      airport.land_plane(plane)
       expect(airport.planes).to include(plane)
     end
 
     it "releases a plane for take off" do
-      airport.land(plane)
+      airport.land_plane(plane)
       airport.release(plane)
       expect(airport.planes).not_to include(plane)
     end
 
     it "will not accept anymore planes if full" do
-      airport.land(plane)
-      expect { airport.land(plane) }.to raise_error "can't land plane"
+      airport.land_plane(plane)
+      expect { airport.land_plane(plane) }.to raise_error "can't land plane"
     end
   end
 
@@ -33,7 +33,7 @@ describe Airport do
       end
 
       it "will not allow plane to land" do
-        expect { airport.land(plane) }.to raise_error "can't land plane"
+        expect { airport.land_plane(plane) }.to raise_error "can't land plane"
       end
     end
   end

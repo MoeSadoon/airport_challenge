@@ -11,11 +11,9 @@ class Airport
     @capacity = capacity
   end
 
-  def land(plane)
+  def land_plane(plane)
     fail "can't land plane" if full? || stormy?
-    plane.land
     @planes << plane
-
   end
 
   def release(plane)
