@@ -13,7 +13,9 @@ class Airport
 
   def land(plane)
     fail "can't land plane" if full? || stormy?
+    plane.land
     @planes << plane
+
   end
 
   def release(plane)
