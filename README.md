@@ -14,13 +14,12 @@ Running tests
 
 Simulating on IRB 
 -----
-Run the command 'irb' in project directory and then the following:
-1. > airport = Airport.new
+2.2.3 :001 > airport = Airport.new
  => #<Airport:0x007f8e2d209938 @planes=[], @capacity=1> 
-2. > plane = Plane.new
+2.2.3 :002 > plane = Plane.new
  => #<Plane:0x007f8e2d1f1130 @flying=true> 
-3. > airport.land(plane)
- *=> [#<Plane:0x007f8e2d1f1130 @flying=false>] 
- 
+2.2.3 :003 > airport.land(plane)
+ => [#<Plane:0x007f8e2d1f1130 @flying=false>] 
+2.2.3 :004 > 
 
  
