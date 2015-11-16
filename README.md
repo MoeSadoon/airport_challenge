@@ -12,8 +12,10 @@ Running tests
 3. When the installation completes, run `bundle`
 4. Run 'rspec'
 
-Simulating on IRB 
------
+Simulating on IRB
+
+```
+$ irb
 2.2.3 :001 > airport = Airport.new
  => #<Airport:0x007f8e2d209938 @planes=[], @capacity=1> 
 2.2.3 :002 > plane = Plane.new
@@ -21,5 +23,5 @@ Simulating on IRB
 2.2.3 :003 > airport.land(plane)
  => [#<Plane:0x007f8e2d1f1130 @flying=false>] 
 2.2.3 :004 > 
+```
 
- 
